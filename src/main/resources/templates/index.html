@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org"> -->
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Spring boot</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <span th:text="${message}">Hello World!</span>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h2>そのゴミ何ゴミだかわかりますか？</h2>
+            <p class="lead">
+                さいたま市のゴミの分別はとてもあやふやです。たとえば、バインダー。バインダーは燃えるゴミでしょうか？燃えないゴミでしょうか？
+                そんな時、下のテキストボックスに調べたいゴミの名前を入れてください。
+            </p>
+        </div>
+    </div>
+    <form action="/" method="POST">
+        <div>
+            <label for="usr">What is your trash?</label>
+            <input name="name" type="text" class="form-control" id="usr" /> <br>
+        </div>
+        <!--<div>
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" name="password" /> <br>
+        </div> -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</body>
+</html>

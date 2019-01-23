@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Find out</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-target=".navbar-collapse" data-toggle="collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">ナニゴミ</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div><!-- /.nav-collapse -->
+    </div><!-- /.container -->
+</div><!-- /.navbar -->
+
+<div class="container">
+    <div class="row row-offcanvas row-offcanvas-left">
+        <div class="row-offcanvas row-offcanvas-right">
+            <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebarLeft" role="navigation">
+                <p class="visible-xs">
+                    <button class="btn btn-primary btn-xs" type="button" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                </p>
+                <div class="well sidebar-nav">
+                    <ul class="nav">
+                        <li>Left Sidebar</li>
+                        <li class="active"><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                    </ul>
+                </div><!--/.well -->
+            </div><!--/span-->
+
+            <div class="col-xs-12 col-sm-8">
+                <p class="pull-left visible-xs">
+                    <button class="btn btn-primary btn-xs" type="button" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                </p>
+                <p class="pull-right visible-xs">
+                    <button class="btn btn-primary btn-xs" type="button" data-toggle="offcanvasright"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                </p>
+                <div class="jumbotron">
+                    <h1>そのゴミなにゴミ？</h1>
+                    <p>
+                        <font size="5" color="#ff8c00" >さいたま市</font>のゴミの分別はとてもあやふやです。<br>
+                        <font size="3"> たとえば、バインダー。<br> バインダーは<font color="#dc143c"> 燃えるゴミ</font>でしょうか？<font color="#0000cd"> 燃えないゴミ</font>でしょうか？<br>
+                            そんな時、下のテキストボックスに調べたいゴミの名前を入れてください。</font>
+                    </p>
+                </div>
+                <div>
+                    <form action="/result" method="POST">
+                        <div>
+                            <label for="usr">What is your trash?</label>
+                            <input name="name" type="text" class="form-control" id="usr" />
+                        </div>
+                        <!--<div>
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="pwd" name="password" /> <br>
+                        </div> -->
+                        <button type="submit" class="btn btn-primary">Let's Search</button>
+                    </form>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-lg-4">
+                        <div th:text="${message}"></div>
+                        <h2></h2>
+                        <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap friendly HTML, CSS and Javascript.</p>
+                        <p><a class="btn btn-default" href="#">View details »</a></p>
+                    </div><!--/span-->
+                    <div class="col-sm-6 col-lg-4">
+                        <h2>Heading</h2>
+                        <p>Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap friendly HTML, CSS and Javascript. Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. </p>
+                        <p><a class="btn btn-default" href="#">View details »</a></p>
+                    </div><!--/span-->
+                    <div class="col-sm-6 col-lg-4">
+                        <h2>Heading</h2>
+                        <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap friendly HTML, CSS and Javascript.</p>
+                        <p><a class="btn btn-default" href="#">View details »</a></p>
+                    </div><!--/span-->
+                    <div class="col-sm-6 col-lg-4">
+                        <h2>Heading</h2>
+                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                        <p><a class="btn btn-default" href="#">View details »</a></p>
+                    </div><!--/span-->
+                    <div class="col-sm-6 col-lg-4">
+                        <h2>Heading</h2>
+                        <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap friendly HTML, CSS and Javascript.</p>
+                        <p><a class="btn btn-default" href="#">View details »</a></p>
+                    </div><!--/span-->
+                    <div class="col-sm-6 col-lg-4">
+                        <h2>Heading</h2>
+                        <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap friendly HTML, CSS and Javascript.</p>
+                        <p><a class="btn btn-default" href="#">View details »</a></p>
+                    </div><!--/span-->
+                </div><!--/row-->
+            </div><!--/span-->
+
+            <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebarRight" role="navigation">
+                <p class="visible-xs">
+                    <button class="btn btn-primary btn-xs" type="button" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                </p>
+                <div class="well sidebar-nav">
+                    <ul class="nav">
+                        <li>Right Sidebar</li>
+                        <li class="active"><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li>Sidebar</li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                    </ul>
+                </div><!--/.well -->
+            </div><!--/span-->
+
+        </div>
+
+    </div><!--/row-->
+
+    <hr>
+
+    <footer>
+        <p>© kayak28 2019</p>
+    </footer>
+</div>
+
+</body>
+</html>
