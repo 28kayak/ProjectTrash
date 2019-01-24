@@ -13,6 +13,7 @@ public class HelloWorldController {
   public String helloWorld(Model model){
     model.addAttribute("message", "What is your trash!");
 
+
     return "index";
   }
 }
